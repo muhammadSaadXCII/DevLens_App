@@ -1,15 +1,16 @@
 import 'package:dio/dio.dart';
+import 'package:flutter_dotenv/flutter_dotenv.dart';
 import '../domain/repositories/code_review_repo.dart';
 
 class CodeReviewRepoImpl implements CodeReviewRepo {
   final Dio dio = Dio();
-  final String baseUrl = "";
+  final String _apiUrl = dotenv.env['DEVLENS_API']!;
 
   @override
   Future<String> getCodeReview(String code) async {
     try {
       final response = await dio.post(
-        baseUrl,
+        _apiUrl,
         data: {"code": code},
         options: Options(headers: {"Content-Type": "application/json"}),
       );

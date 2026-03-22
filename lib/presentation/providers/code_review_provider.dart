@@ -34,4 +34,8 @@ class CodeReviewNotifier extends StateNotifier<CodeReviewState> {
   void changeLanguage(Language lang) {
     state = state.copyWith(selectedLanguage: lang);
   }
+
+  void updateReview(String msg) {
+    state = state.copyWith(reviewResult: msg);
+  }
 }

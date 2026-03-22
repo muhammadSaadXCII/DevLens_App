@@ -2,7 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import './presentation/screens/code_review_screen.dart';
 
-void main() {
+void main() async {
+  await dotenv.load(fileName: ".env");
   runApp(const MyApp());
 }
 
@@ -13,7 +14,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return ProviderScope(
       child: MaterialApp(
-        title: 'AI-Powered Code Reviewer',
+        title: 'DevLens',
         debugShowCheckedModeBanner: false,
         theme: ThemeData.dark(),
         home: const CodeReviewScreen(),
