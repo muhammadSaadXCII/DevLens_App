@@ -2,7 +2,6 @@
 
 [![Flutter Version](https://img.shields.io/badge/Flutter-3.9.0-blue.svg)](https://flutter.dev/)
 [![Platforms](https://img.shields.io/badge/Platforms-Android%20%7C%20iOS-blue.svg)](https://flutter.dev/)
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 A smart code review assistant powered by generative AI.
 
