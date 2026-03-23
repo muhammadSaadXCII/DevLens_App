@@ -15,6 +15,10 @@ Dev Lens is a Flutter application that helps developers get instant feedback on 
 *   **Syntax Highlighting:** View code with proper highlighting for better readability.
 *   **Language Support:** Supports multiple programming languages for code review.
 
+### 🎥 Demo Video
+
+https://github.com/user-attachments/assets/30a0778d-fd89-476c-bb77-6a3bee72f26a
+
 ## 📋 Prerequisites
 
 Before you begin, ensure you have the following installed:
