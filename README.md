@@ -31,8 +31,8 @@ Before you begin, ensure you have the following installed:
 
 1.  **Clone the repository:**
     ```bash
-    git clone https://github.com/muhammadSaadXCII/dev-lens.git
-    cd dev-lens
+    git clone https://github.com/muhammadSaadXCII/Dev_Lens_App.git
+    cd Dev_Lens_App
     ```
 
 2.  **Install dependencies:**
