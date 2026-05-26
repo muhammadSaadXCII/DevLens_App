@@ -1,4 +1,4 @@
-# DevLens
+# DevLens — AI-Powered Code Review Assistant
 
 [![Flutter Version](https://img.shields.io/badge/Flutter-3.9.0-blue.svg)](https://flutter.dev/)
 [![Platforms](https://img.shields.io/badge/Platforms-Android%20%7C%20iOS-blue.svg)](https://flutter.dev/)
