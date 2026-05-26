@@ -5,7 +5,7 @@
 [![Riverpod](https://img.shields.io/badge/State-Riverpod-blue)](https://riverpod.dev/)
 [![Platform](https://img.shields.io/badge/Platform-Android%20%7C%20Web-green)](https://flutter.dev/)
 
-DevLens is a full-stack AI-powered code review assistant built with Flutter and Node.js. Paste your code, select from 37 supported languages, and instantly receive structured feedback on bugs, performance issues, security risks, and optimization suggestions — all powered by GPT-4o Mini through a secure backend API. The app features a split-panel interface with live syntax highlighting on the left and AI-generated Markdown feedback on the right, adapting seamlessly between mobile and desktop layouts. All AI requests are routed through a dedicated Node.js/Express backend with JWT authentication and rate limiting — keeping API keys off the client entirely.
+DevLens is a full-stack AI-powered code review assistant built with Flutter and Node.js. Paste your code, select from 37 supported languages, and instantly receive structured feedback on bugs, performance issues, security risks, and optimization suggestions — all powered by GPT-4o Mini through a secure backend API. The app features a split-panel interface with live syntax highlighting on the left and AI-generated Markdown feedback on the right, adapting seamlessly between mobile and desktop layouts. All AI requests are routed through a dedicated Node.js/Express backend with server-side token handling via AzureKeyCredential and rate limiting — keeping API keys off the client entirely.
 
 ---
 
@@ -22,7 +22,7 @@ https://github.com/user-attachments/assets/30a0778d-fd89-476c-bb77-6a3bee72f26a
 - **Syntax Highlighting** — Live syntax highlighting powered by `code_text_field` and `highlight`
 - **Split-Panel UI** — Code editor on the left, AI review rendered as Markdown on the right
 - **Responsive Layout** — Adapts between vertical (mobile) and horizontal (desktop/web) layouts at 900px breakpoint
-- **Secure Backend** — All AI requests route through a Node.js/Express API with JWT authentication and rate limiting — API keys never exposed in the client
+- **Secure Backend** — All AI requests route through a Node.js/Express API with server-side token handling via AzureKeyCredential and rate limiting — API keys never exposed in the client
 - **Clean Architecture** — Strict separation into Data, Domain, and Presentation layers with Riverpod state management
 
 ---
@@ -75,7 +75,7 @@ lib/
 | Repo | Description |
 |------|-------------|
 | [DevLens_App](https://github.com/muhammadSaadXCII/DevLens_App) | This Flutter frontend |
-| [DevLens_API](https://github.com/muhammadSaadXCII/DevLens_API) | Node.js/Express backend with JWT auth and GPT-4o Mini integration |
+| [DevLens_API](https://github.com/muhammadSaadXCII/DevLens_API) | Node.js/Express backend with rate limiting, AzureKeyCredential token handling, and GPT-4o Mini integration |
 
 ---
 
@@ -123,5 +123,5 @@ flutter run -d chrome
 ## 🔐 Security Notes
 
 - The Flutter client never calls the AI API directly — all requests go through the Node.js backend
-- The backend uses JWT authentication and rate limiting to prevent unauthorized access and API key abuse
+- The backend uses server-side token handling via AzureKeyCredential and rate limiting (5 req/60s) to prevent unauthorized access and API key abuse
 - The `DEVLENS_API` endpoint URL is loaded from `.env` at runtime and never hardcoded
